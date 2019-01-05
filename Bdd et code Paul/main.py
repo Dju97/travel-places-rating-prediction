@@ -34,7 +34,7 @@ df.drop('username',1,inplace=True)
 df.drop('registerDate',1,inplace=True)
 df.drop('taObjectCity',1,inplace=True)
 df.drop('taObject',1,inplace=True)
-df.drop('location',1,inplace=True)
+#df.drop('location',1,inplace=True)
 df.drop('travelStyle',1,inplace=True)
 df.drop('reviewerBadge',1,inplace=True)
 
@@ -108,28 +108,28 @@ Xtest.drop('rating',1,inplace=True)
 
 
 
-######Treatement LDA 
-sklearn_lda = LDA()
-
-## Fit the LDA
-sklearn_lda = sklearn_lda.fit(X, Y)
-
-## Transform the data
-X_sklearn_lda=sklearn_lda.transform(X)
-Xtest_sklearn_lda=sklearn_lda.transform(Xtest)
-
-##### Classification Random forest
-clf = RandomForestClassifier(n_estimators=500,max_features=0.7,max_depth=2,
-                             random_state=0)
-
-
-## Fit the classifier
-clf.fit(X, Y)
-
-
-## Predict the class of X test
-#Y_predict=clf.predict(Xtest)
-score=clf.score(Xtest,Ytest)
+#######Treatement LDA 
+#sklearn_lda = LDA()
+#
+### Fit the LDA
+#sklearn_lda = sklearn_lda.fit(X, Y)
+#
+### Transform the data
+#X_sklearn_lda=sklearn_lda.transform(X)
+#Xtest_sklearn_lda=sklearn_lda.transform(Xtest)
+#
+###### Classification Random forest
+#clf = RandomForestClassifier(n_estimators=500,max_features=0.7,max_depth=2,
+#                             random_state=0)
+#
+#
+### Fit the classifier
+#clf.fit(X, Y)
+#
+#
+### Predict the class of X test
+##Y_predict=clf.predict(Xtest)
+#score=clf.score(Xtest,Ytest)
 
 
 
